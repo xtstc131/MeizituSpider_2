@@ -6,7 +6,7 @@ from meizitu.items import MeizituItem
 class  MeiziSpider(scrapy.Spider):
 		name = 'meizi'
 		allowed_domains =["meizitu.com"]
-		start_urls =('http://www.meizitu.com/a/luoli.html',)
+		start_urls =('http://www.meizitu.com/a/xinggan.html',)
 		def parse(self,response):
 			sel = Selector(response)
 			for link in sel.xpath('//h3/a/@href').extract():
